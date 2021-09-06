@@ -199,4 +199,10 @@ footer {
     height: 100px;
     flex-direction: column;
   }
+  .lower-footer .lower-left-footer li a {
+    margin: 0 7.5px;
+  }
+  .lower-footer .lower-right-footer li a {
+    margin: 0 7.5px;
+  }
 }
