@@ -112,9 +112,9 @@ header {
   margin-right: 15px;
   font-size: 16px;
 }
-/* .search-bar input:active {
-  
-} */
+.search-bar input:focus {
+  outline: none;
+}
 .search-btn {
   margin-top: 20px;
 }
@@ -181,7 +181,22 @@ footer {
 .lower-footer a:hover {
   text-decoration: underline;
 }
-/* .lower-footer .lower-left-footer li a:hover,
-.lower-footer .lower-right-footer li a:hover {
-  text-decoration: underline;
-} */
+
+/* Mobile & Tablet */
+@media only screen and (max-width: 650px) {
+  /* search bar */
+  .search-bar {
+    width: 85%;
+  }
+  /* Footer */
+  footer {
+    height: 150px;
+  }
+  .upper-footer {
+    height: 50px;
+  }
+  .lower-footer {
+    height: 100px;
+    flex-direction: column;
+  }
+}
