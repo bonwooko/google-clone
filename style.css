@@ -142,3 +142,46 @@ header {
   text-decoration: underline;
 }
 /* Footer */
+footer {
+  background-color: #f2f2f2;
+  height: 100px;
+}
+.footer-content {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.upper-footer {
+  height: 50%;
+  border-bottom: 1px solid lightgray;
+}
+.upper-footer p {
+  color: gray;
+  font-size: 14px;
+}
+.lower-footer {
+  display: flex;
+  height: 50%;
+  justify-content: space-between;
+}
+.lower-footer .lower-left-footer,
+.lower-footer .lower-right-footer {
+  display: flex;
+}
+.lower-footer .lower-left-footer li a {
+  margin-right: 15px;
+  color: gray;
+  font-size: 14px;
+}
+.lower-footer .lower-right-footer li a {
+  margin-left: 15px;
+  color: gray;
+  font-size: 14px;
+}
+.lower-footer a:hover {
+  text-decoration: underline;
+}
+/* .lower-footer .lower-left-footer li a:hover,
+.lower-footer .lower-right-footer li a:hover {
+  text-decoration: underline;
+} */
