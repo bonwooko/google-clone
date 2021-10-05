@@ -1,4 +1,18 @@
-/* Common */
+/* ***** Variables ***** */
+:root {
+  --clr-black: black;
+  --clr-white: #ffffff;
+  --clr-light-gray: #f2f2f2;
+
+  --clr-dark-gray-bg: #202124;
+  --clr-dark-gray-btn: ##303134;
+  --clr-dark: #171717;
+  --clr-light-gray-font: #999da1;
+
+  --transition: all 0.3s linear;
+}
+
+/* ***** Global Style ***** */
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +31,15 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+/* ************************ */
+/* ***** Google clone ***** */
+/* ************************ */
+
+/* ***** Header ***** */
 header {
   height: 60px;
 }
+/* navbar */
 .navbar {
   height: 100%;
   width: 100%;
@@ -37,7 +56,7 @@ header {
   margin-left: 15px;
 }
 .navbar ul li a {
-  color: black;
+  color: var(--clr-black);
 }
 .navbar ul li a.link:hover {
   text-decoration: underline;
@@ -68,7 +87,7 @@ header {
   width: 35px;
 }
 
-/* Content */
+/* ***** Content ***** */
 .content-section {
   flex-grow: 1;
   display: flex;
@@ -83,17 +102,19 @@ header {
   align-items: center;
   padding-bottom: 100px;
 }
+/* logo */
 .logo-img {
   width: 400px;
-  margin: 20px
+  margin: 20px;
 }
+/* search bar */
 .search-bar {
   border: 1px solid lightgray;
   width: 600px;
   height: 40px;
   border-radius: 30px;
   display: flex;
-  align-items:  center;
+  align-items: center;
   padding-left: 15px;
 }
 .search-bar:hover {
@@ -115,6 +136,7 @@ header {
 .search-bar input:focus {
   outline: none;
 }
+/* search btn */
 .search-btn {
   margin-top: 20px;
 }
@@ -131,6 +153,7 @@ header {
 .search-btn button:hover {
   border: 1px solid #b5b5b5;
 }
+/* language */
 .language {
   margin-top: 20px;
   font-size: 14px;
@@ -141,9 +164,18 @@ header {
 .language p a:hover {
   text-decoration: underline;
 }
-/* Footer */
+
+/* Mobile & Tablet */
+@media only screen and (max-width: 650px) {
+  /* search bar */
+  .search-bar {
+    width: 85%;
+  }
+}
+
+/* ***** Footer ***** */
 footer {
-  background-color: #f2f2f2;
+  background-color: var(--clr-light-gray);
   height: 100px;
 }
 .footer-content {
@@ -151,6 +183,7 @@ footer {
   align-items: center;
   padding: 20px;
 }
+/* country */
 .upper-footer {
   height: 50%;
   border-bottom: 1px solid lightgray;
@@ -159,6 +192,7 @@ footer {
   color: gray;
   font-size: 14px;
 }
+/* about google */
 .lower-footer {
   display: flex;
   height: 50%;
@@ -184,10 +218,6 @@ footer {
 
 /* Mobile & Tablet */
 @media only screen and (max-width: 650px) {
-  /* search bar */
-  .search-bar {
-    width: 85%;
-  }
   /* Footer */
   footer {
     height: 150px;

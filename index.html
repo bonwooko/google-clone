@@ -1,102 +1,109 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Clone</title>
-  <link rel="icon" href="./images/favicon.ico">
-  <link rel="stylesheet" href="./style.css">
-  <script src="https://kit.fontawesome.com/519d3ae8c5.js" crossorigin="anonymous"></script>
-  <script defer src="./main.js"></script>
-</head>
-<body>
-  <!-- Header -->
-  <header>
-    <nav class="navbar">
-      <ul>
-        <li>
-          <a class="link" href="javascript:void(0)">Gmail</a>
-        </li>
-        <li>
-          <a class="link" href="javascript:void(0)">이미지</a>
-        </li>
-        <li>
-          <div class="circle-shadow">
-            <a class="menu-icon" href="javascript:void(0)">
-              <i class="fas fa-bars"></i>
-            </a>
-          </div>
-        </li>
-        <li>
-          <div class="circle-shadow">
-            <a class="user-icon" href="javascript:void(0)">
-              <span>
-                <img class="avatar" src="./images/avatar.png" alt="avatar">
-              </span>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Clone</title>
+    <link rel="icon" href="./images/favicon.ico" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/519d3ae8c5.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./main.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li>
+            <a class="link" href="javascript:void(0)">Gmail</a>
+          </li>
+          <li>
+            <a class="link" href="javascript:void(0)">이미지</a>
+          </li>
+          <li>
+            <div class="circle-shadow">
+              <a class="menu-icon" href="javascript:void(0)">
+                <i class="fas fa-bars"></i>
+              </a>
+            </div>
+          </li>
+          <li>
+            <div class="circle-shadow">
+              <a class="user-icon" href="javascript:void(0)">
+                <span>
+                  <img class="avatar" src="./images/avatar.png" alt="avatar" />
+                </span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <!-- Content -->
-  <section class="content-section">
-    <div class="content-wrapper">
-      <!-- logo img -->
-      <img class="logo-img" src="./images/googles-new-logo-5078286822539264.3-hp2x.gif" alt="logo">
-      <!-- search bar -->
-      <div class="search-bar">
-        <i class="fas fa-search"></i>
-        <input id="search-input" class="search-input" type="text">
-        <i class="fas fa-keyboard"></i>
-        <i class="fas fa-microphone"></i>
+    <!-- Content -->
+    <section class="content-section">
+      <div class="content-wrapper">
+        <!-- logo img -->
+        <img
+          class="logo-img"
+          src="./images/googles-new-logo-5078286822539264.3-hp2x.gif"
+          alt="logo"
+        />
+        <!-- search bar -->
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input id="search-input" class="search-input" type="text" />
+          <i class="fas fa-keyboard"></i>
+          <i class="fas fa-microphone"></i>
+        </div>
+        <!-- search btn -->
+        <div class="search-btn">
+          <button class="google-search-btn">Google 검색</button>
+          <button class="lucky-btn">I'm Feeling Lucky</button>
+        </div>
+        <!-- language -->
+        <div class="language">
+          <p>Google 제공 서비스: <a href="javascript:void(0)">English</a></p>
+        </div>
       </div>
-      <!-- search btn -->
-      <div class="search-btn">
-        <button class="google-search-btn">Google 검색</button>
-        <button class="lucky-btn">I'm Feeling Lucky</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="upper-footer footer-content">
+        <p>대한민국</p>
       </div>
-      <!-- language -->
-      <div class="language">
-        <p>Google 제공 서비스: <a href="javascript:void(0)">English</a></p>
+      <div class="lower-footer footer-content">
+        <ul class="lower-left-footer">
+          <li>
+            <a href="javascript:void(0)">Google 정보</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">광고</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">비즈니스</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">검색의 원리</a>
+          </li>
+        </ul>
+        <ul class="lower-right-footer">
+          <li>
+            <a href="javascript:void(0)">개인정보처리방침</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">약관</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">설정</a>
+          </li>
+        </ul>
       </div>
-    </div>
-  </section>
-  
-  <!-- Footer -->
-  <footer>
-    <div class="upper-footer footer-content">
-      <p>대한민국</p>
-    </div>
-    <div class="lower-footer footer-content">
-      <ul class="lower-left-footer">
-        <li>
-          <a href="javascript:void(0)">Google 정보</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">광고</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">비즈니스</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">검색의 원리</a>
-        </li>
-      </ul>
-      <ul class="lower-right-footer">
-        <li>
-          <a href="javascript:void(0)">개인정보처리방침</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">약관</a>
-        </li>
-        <li>
-          <a href="javascript:void(0)">설정</a>
-        </li>
-      </ul>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
