@@ -1,4 +1,18 @@
-/* Common */
+/* ***** Variables ***** */
+:root {
+  --clr-white: #ffffff;
+  --clr-black: black;
+  --clr-light-gray: #f2f2f2;
+
+  --clr-dark-bg: #202124;
+  --clr-dark-btn: #303134;
+  --clr-dark-bottom-bg: #171717;
+  --clr-dark-second-font: #999da1;
+
+  --transition: all 0.3s linear;
+}
+
+/* ***** Global Style ***** */
 * {
   margin: 0;
   padding: 0;
@@ -17,15 +31,36 @@ body {
   flex-direction: column;
 }
 
-/* Header */
+/* ************************ */
+/* ***** Google clone ***** */
+/* ************************ */
+body {
+  background: var(--clr-white);
+}
+body.dark-bg {
+  background: var(--clr-dark-bg);
+}
+/* ***** Header ***** */
 header {
   height: 60px;
 }
+/* navbar */
 .navbar {
   height: 100%;
   width: 100%;
   padding: 10px 20px;
 }
+.navbar .toggle {
+  border: transparent;
+  font-size: 16px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  color: var(--clr-black);
+}
+
 .navbar ul {
   height: 100%;
   display: flex;
@@ -36,8 +71,11 @@ header {
 .navbar ul li {
   margin-left: 15px;
 }
-.navbar ul li a {
-  color: black;
+.navbar .nav-link {
+  color: var(--clr-black);
+}
+.navbar .nav-link.dark-mode {
+  color: var(--clr-white);
 }
 .navbar ul li a.link:hover {
   text-decoration: underline;
@@ -52,6 +90,9 @@ header {
 }
 .circle-shadow:hover {
   background-color: rgba(0, 0, 0, 0.1);
+}
+.circle-shadow.dark-sd:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .menu-icon {
   font-size: 18px;
@@ -68,7 +109,7 @@ header {
   width: 35px;
 }
 
-/* Content */
+/* ***** Content ***** */
 .content-section {
   flex-grow: 1;
   display: flex;
@@ -83,27 +124,36 @@ header {
   align-items: center;
   padding-bottom: 100px;
 }
+/* logo */
 .logo-img {
   width: 400px;
-  margin: 20px
+  margin: 20px;
 }
+/* search bar */
 .search-bar {
   border: 1px solid lightgray;
   width: 600px;
   height: 40px;
   border-radius: 30px;
   display: flex;
-  align-items:  center;
+  align-items: center;
   padding-left: 15px;
+}
+.search-bar.dark-bar {
+  border: 1px solid gray;
 }
 .search-bar:hover {
   box-shadow: 0px 0px 4px 0px #b5b5b5;
 }
+
 .search-bar i {
   font-size: 18px;
   color: gray;
   margin-right: 15px;
   cursor: pointer;
+}
+.search-bar i.dark-icon {
+  color: gray;
 }
 .search-bar input {
   border: none;
@@ -112,9 +162,14 @@ header {
   margin-right: 15px;
   font-size: 16px;
 }
+.search-bar input.dark-input {
+  background-color: var(--clr-dark-bg);
+  caret-color: gray;
+}
 .search-bar input:focus {
   outline: none;
 }
+/* search btn */
 .search-btn {
   margin-top: 20px;
 }
@@ -126,14 +181,22 @@ header {
   margin-left: 10px;
   padding: 0px 15px;
   color: black;
-  background-color: #f2f3f4;
+  background-color: var(--clr-light-gray);
+}
+.search-btn .btn.dark-btn {
+  background-color: var(--clr-dark-btn);
+  color: var(--clr-white);
 }
 .search-btn button:hover {
   border: 1px solid #b5b5b5;
 }
+/* language */
 .language {
   margin-top: 20px;
   font-size: 14px;
+}
+.language.dark-lang {
+  color: var(--clr-white);
 }
 .language p a {
   color: blue;
@@ -141,28 +204,52 @@ header {
 .language p a:hover {
   text-decoration: underline;
 }
-/* Footer */
+
+/* Mobile & Tablet */
+@media only screen and (max-width: 650px) {
+  /* search bar */
+  .search-bar {
+    width: 85%;
+  }
+}
+
+/* ***** Footer ***** */
 footer {
-  background-color: #f2f2f2;
+  background-color: var(--clr-light-gray);
   height: 100px;
+}
+footer.dark-footer {
+  background-color: var(--clr-dark-bottom-bg);
 }
 .footer-content {
   display: flex;
   align-items: center;
   padding: 20px;
 }
+/* country */
 .upper-footer {
   height: 50%;
   border-bottom: 1px solid lightgray;
 }
+.upper-footer.dark-upper {
+  border-bottom: 1px solid var(--clr-dark-bg);
+}
 .upper-footer p {
   color: gray;
   font-size: 14px;
+  padding-left: 0.5rem;
 }
+/* about google */
 .lower-footer {
   display: flex;
   height: 50%;
   justify-content: space-between;
+}
+.lower-footer .lower-left-footer {
+  padding-left: 0.5rem;
+}
+.lower-footer .lower-right-footer {
+  padding-right: 0.5rem;
 }
 .lower-footer .lower-left-footer,
 .lower-footer .lower-right-footer {
@@ -184,10 +271,6 @@ footer {
 
 /* Mobile & Tablet */
 @media only screen and (max-width: 650px) {
-  /* search bar */
-  .search-bar {
-    width: 85%;
-  }
   /* Footer */
   footer {
     height: 150px;
